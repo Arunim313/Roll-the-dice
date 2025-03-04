@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Player Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-title">
+            <h1>Dice Game</h1>
+            <button id="reset-btn">New Game</button>
+        </div>
+        
+        <div class="player-container">
+            <!-- Player 1 Section -->
+            <div class="player player-1 active">
+                <div class="player-name-container">
+                    <input type="text" class="player-name-input" id="player1-name" value="Player 1" maxlength="15">
+                    <button class="edit-name-btn" id="edit-player1"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+                <div class="score-section">
+                    <div class="saved-score">
+                        <h2>Saved Score</h2>
+                        <p id="player1-saved-score">0</p>
+                    </div>
+                    <div class="current-score">
+                        <h3>Current Score</h3>
+                        <p id="player1-current-score">0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dice Section -->
+            <div class="dice-section">
+                <div class="dice" id="dice">
+                    <div class="dice-dot" id="dot1"></div>
+                    <div class="dice-dot" id="dot2"></div>
+                    <div class="dice-dot" id="dot3"></div>
+                    <div class="dice-dot" id="dot4"></div>
+                    <div class="dice-dot" id="dot5"></div>
+                    <div class="dice-dot" id="dot6"></div>
+                    <div class="dice-dot" id="dot7"></div>
+                    <div class="dice-dot" id="dot8"></div>
+                    <div class="dice-dot" id="dot9"></div>
+                </div>
+                <div class="game-controls">
+                    <button id="roll-btn">Roll Dice</button>
+                    <button id="save-btn">Save Score</button>
+                </div>
+                <div id="message"></div>
+            </div>
+            
+            <!-- Player 2 Section -->
+            <div class="player player-2">
+                <div class="player-name-container">
+                    <input type="text" class="player-name-input" id="player2-name" value="Player 2" maxlength="15">
+                    <button class="edit-name-btn" id="edit-player2"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+                <div class="score-section">
+                    <div class="saved-score">
+                        <h2>Saved Score</h2>
+                        <p id="player2-saved-score">0</p>
+                    </div>
+                    <div class="current-score">
+                        <h3>Current Score</h3>
+                        <p id="player2-current-score">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="winner-modal" class="modal">
+            <div class="modal-content">
+                <h2 id="winner-message">Player 1 Wins!</h2>
+                <button id="play-again-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
